@@ -17,23 +17,20 @@ const Navbar = () => {
 	const productCart = useSelector((state) => state.product.productCart);
 	// const isLogin = useSelector((state) => state.auth.isLogin);
 	const cartState = useSelector((state) => state.product.cartState);
-	const [user, setUser] = useState(null);
-	// const [cartItem, setCartItems] = useState([]);
-	// const user = useSelector((state) => state.auth.user);
-	// if (!user) {
-	// 	dispatch(
-	// 		loginAction.onLogin(JSON.parse(localStorage.getItem('user')) || [])
-	// 	);
-	// }
+	const [cartItem, setCartItems] = useState([]);
+	const user = useSelector((state) => state.auth.user);
+	if (!user) {
+		dispatch(loginAction.onLogin(JSON.parse(localStorage.getItem('user'))));
+	}
 
 	const navigate = useNavigate();
-	useEffect(() => {
-		const storedCartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
-		const user = JSON.parse(localStorage.getItem('user'));
-		if (user) {
-			setUser(user);
-		}
-	}, [dispatch, products, productCart]);
+	// useEffect(() => {
+	// 	const storedCartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+	// 	const user = JSON.parse(localStorage.getItem('user'));
+	// 	if (user) {
+	// 		setUser(user);
+	// 	}
+	// }, [dispatch, products, productCart]);
 
 	const handlerLogout = () => {
 		const confirmLogout = window.confirm(
