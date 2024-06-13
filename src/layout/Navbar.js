@@ -41,7 +41,7 @@ const Navbar = () => {
 				'user=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=yourdomain.com';
 			dispatch(loginAction.onLogout());
 			dispatch(productAction.ressetState());
-			navigate('/sign-in');
+			navigate('sign-in');
 		} else {
 			// Không làm gì nếu người dùng hủy logout
 		}
