@@ -111,7 +111,6 @@ const Navbar = () => {
 									className={classes.iconDown}
 								/>
 								<NavLink
-									to='sign-in'
 									className={({ isActive }) =>
 										isActive ? classes.active : classes.nav
 									}
