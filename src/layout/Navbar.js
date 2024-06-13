@@ -110,7 +110,7 @@ const Navbar = () => {
 									icon={faSortDown}
 									className={classes.iconDown}
 								/>
-								<NavLink
+								<div
 									className={({ isActive }) =>
 										isActive ? classes.active : classes.nav
 									}
@@ -118,7 +118,7 @@ const Navbar = () => {
 									<p className={classes.textLogout} onClick={handlerLogout}>
 										Logout
 									</p>
-								</NavLink>
+								</div>
 							</div>
 						</>
 					) : (
