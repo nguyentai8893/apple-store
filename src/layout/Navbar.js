@@ -42,6 +42,8 @@ const Navbar = () => {
 			dispatch(loginAction.onLogout());
 			dispatch(productAction.ressetState());
 			navigate('/sign-up');
+		} else {
+			// Không làm gì nếu người dùng hủy logout
 		}
 	};
 
